@@ -106,7 +106,6 @@ public class StockService {
                 stock.getNamaBarang(),
                 stock.getJumlahStokBarang(),
                 stock.getNomorSeriBarang(),
-                stock.getAdditionalInfo(),
                 stock.getGambarBarang(),
                 stock.getUpdatedAt(),
                 stock.getUpdatedBy()

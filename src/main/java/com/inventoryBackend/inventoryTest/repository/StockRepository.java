@@ -18,7 +18,7 @@ public interface StockRepository extends JpaRepository<Stock, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "UPDATE inventory.stocks SET nama_barang = :namaBarang, jumlah_stok_barang = :jumlahStokBarang, nomor_seri_barang = :nomorSeriBarang, additional_info = CAST(:additionalInfo AS jsonb), gambar_barang = :gambarBarang, updated_at = :updatedAt, updated_by = :updatedBy WHERE id = :id",
+    @Query(value = "UPDATE inventory.stocks SET nama_barang = :namaBarang, jumlah_stok_barang = :jumlahStokBarang, nomor_seri_barang = :nomorSeriBarang, gambar_barang = :gambarBarang, updated_at = :updatedAt, updated_by = :updatedBy WHERE id = :id",
             nativeQuery = true)
-    void updateDataStock(Long id, String namaBarang, Integer jumlahStokBarang, String nomorSeriBarang, String additionalInfo, String gambarBarang, LocalDateTime updatedAt, String updatedBy);
+    void updateDataStock(Long id, String namaBarang, Integer jumlahStokBarang, String nomorSeriBarang, String gambarBarang, LocalDateTime updatedAt, String updatedBy);
 }
